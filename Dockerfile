@@ -58,3 +58,6 @@ WORKDIR /data
 
 # Default command.
 CMD ["bash"]
+
+# test
+CMD ["service openvswitch-switch start"]
