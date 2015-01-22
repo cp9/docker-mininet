@@ -15,7 +15,7 @@ Run mininet with userspace vswitches.
 
 	mn --switch user
 
-Run ssh server
+Run ssh server(username/password: root/root)
 
 	/usr/sbin/sshd -D
 	
