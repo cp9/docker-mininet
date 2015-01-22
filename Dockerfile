@@ -25,7 +25,7 @@ RUN \
     libtool \
     net-tools \
     openssh-client \
-    openssh-client \
+    openssh-server \
     patch \
     vim \
 
