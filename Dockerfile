@@ -1,6 +1,6 @@
 FROM debian:wheezy
 
-MAINTAINER Ozzy Johnson <docker@ozzy.io>
+MAINTAINER cp9 <lichandler116@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
