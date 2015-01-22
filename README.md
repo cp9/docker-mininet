@@ -14,3 +14,8 @@ It seems like this should be doable with --cap-add rather than going fully privi
 Run mininet with userspace vswitches.
 
 	mn --switch user
+
+Run ssh server
+
+	/usr/sbin/sshd -D
+	
