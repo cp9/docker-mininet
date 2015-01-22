@@ -11,8 +11,6 @@ Pull or build the image.
 	docker images
 	docker run -it <IMAGE ID>
 
-It seems like this should be doable with --cap-add rather than going fully privileged, but I haven't spent much time with it.
-
 Run mininet with userspace vswitches.
 
 	mn --switch user
