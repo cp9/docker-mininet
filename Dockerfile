@@ -25,6 +25,7 @@ RUN \
     libtool \
     net-tools \
     openssh-client \
+    openssh-client \
     patch \
     vim \
 
@@ -52,12 +53,18 @@ RUN \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+# Set ssh server
+    RUN mkdir /var/run/sshd
+    RUN echo 'root:root' | chpasswd
+    RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+    RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+    ENV NOTVISIBLE "in users profile"
+    RUN echo "export VISIBLE=now" >> /etc/profile
+
+
 VOLUME ["/data"]
 
 WORKDIR /data
 
 # Default command.
-CMD ["bash"]
-
-# test
-CMD ["service openvswitch-switch start"]
+CMD service openvswitch-switch start && bash
