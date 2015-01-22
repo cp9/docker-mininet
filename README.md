@@ -7,7 +7,7 @@ Mininet with OpenFlow and OpenVSwitch from source in a Docker container. There a
 
 Pull or build the image.
 
-	docker run --privileged=true -it --rm ozzyjohnson/mininet
+	docker run --privileged=true -it --rm imcp9/mininet
 
 It seems like this should be doable with --cap-add rather than going fully privileged, but I haven't spent much time with it.
 
