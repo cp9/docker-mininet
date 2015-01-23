@@ -9,7 +9,7 @@ Pull or build the image.
 
 	docker pull imcp9/mininet:ovs1.4.2
 	docker images
-	docker run -it <IMAGE ID>
+	docker run --privileged=true -it <IMAGE ID>
 
 Run mininet with userspace vswitches.
 
