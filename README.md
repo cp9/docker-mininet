@@ -7,9 +7,7 @@ Mininet with OpenFlow and OpenVSwitch from source in a Docker container. There a
 
 Pull or build the image.
 
-	docker pull imcp9/mininet:ovs1.4.2
-	docker images
-	docker run --privileged=true -it <IMAGE ID>
+	docker run --privileged=true -it --rm imcp9/mininet:ovs1.4.2
 
 Run mininet with userspace vswitches.
 
